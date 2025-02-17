@@ -102,7 +102,7 @@ require('packer').startup(function(use)
 			'MunifTanjim/nui.nvim',
 			'neovim/nvim-lspconfig',
 			'mfussenegger/nvim-dap',
-		}
+	--	}
 	}
 	-- Tema Catppuccin
 	use { 'catppuccin/nvim', as = 'catppuccin' }
