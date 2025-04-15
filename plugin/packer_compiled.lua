@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/talkk/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?.lua;/home/talkk/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?/init.lua;/home/talkk/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?.lua;/home/talkk/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/talkk/.cache/nvim/packer_hererocks/2.1.1736781742/lib/lua/5.1/?.so"
+local package_path_str = "/home/talkk/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/home/talkk/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/home/talkk/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/home/talkk/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/talkk/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -109,28 +109,13 @@ _G.packer_plugins = {
     path = "/home/talkk/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
-  ["iron.nvim"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/iron.nvim",
-    url = "https://github.com/hkupty/iron.nvim"
-  },
-  ["jupytext.vim"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/jupytext.vim",
-    url = "https://github.com/GCBallesteros/jupytext.vim"
-  },
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "/home/talkk/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
-  ["lua-async-await"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/lua-async-await",
-    url = "https://github.com/nvim-java/lua-async-await"
-  },
   ["lualine.nvim"] = {
-    config = { "\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\foptions\1\0\1\foptions\0\25component_separators\1\0\2\tleft\b\nright\b\23section_separators\1\0\2\tleft\b\nright\b\1\0\3\ntheme\15catppuccin\25component_separators\0\23section_separators\0\nsetup\flualine\frequire\0" },
+    config = { "\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\foptions\1\0\1\foptions\0\25component_separators\1\0\2\nright\b\tleft\b\23section_separators\1\0\2\nright\b\tleft\b\1\0\3\23section_separators\0\ntheme\15catppuccin\25component_separators\0\nsetup\flualine\frequire\0" },
     loaded = true,
     path = "/home/talkk/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
@@ -145,55 +130,10 @@ _G.packer_plugins = {
     path = "/home/talkk/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/talkk/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-python"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
-    url = "https://github.com/mfussenegger/nvim-dap-python"
-  },
-  ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
-  ["nvim-java"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/nvim-java",
-    url = "https://github.com/nvim-java/nvim-java"
-  },
-  ["nvim-java-core"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/nvim-java-core",
-    url = "https://github.com/nvim-java/nvim-java-core"
-  },
-  ["nvim-java-dap"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/nvim-java-dap",
-    url = "https://github.com/nvim-java/nvim-java-dap"
-  },
-  ["nvim-java-refactor"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/nvim-java-refactor",
-    url = "https://github.com/nvim-java/nvim-java-refactor"
-  },
-  ["nvim-java-test"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/nvim-java-test",
-    url = "https://github.com/nvim-java/nvim-java-test"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -231,7 +171,6 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["telescope.nvim"] = {
-    config = { "\27LJ\2\n�\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rdefaults\1\0\1\rdefaults\0\1\0\3\20layout_strategy\15horizontal\20selection_caret\t \18prompt_prefix\t \nsetup\14telescope\frequire\0" },
     loaded = true,
     path = "/home/talkk/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
@@ -240,27 +179,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/talkk/.local/share/nvim/site/pack/packer/start/vim-closer",
     url = "https://github.com/rstacruz/vim-closer"
-  },
-  ["vim-textobj-hydrogen"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/vim-textobj-hydrogen",
-    url = "https://github.com/GCBallesteros/vim-textobj-hydrogen"
-  },
-  ["vim-textobj-user"] = {
-    loaded = true,
-    path = "/home/talkk/.local/share/nvim/site/pack/packer/start/vim-textobj-user",
-    url = "https://github.com/kana/vim-textobj-user"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\n�\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\rdefaults\1\0\1\rdefaults\0\1\0\3\20layout_strategy\15horizontal\20selection_caret\t \18prompt_prefix\t \nsetup\14telescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\foptions\1\0\1\foptions\0\25component_separators\1\0\2\tleft\b\nright\b\23section_separators\1\0\2\tleft\b\nright\b\1\0\3\ntheme\15catppuccin\25component_separators\0\23section_separators\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
+try_loadstring("\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\foptions\1\0\1\foptions\0\25component_separators\1\0\2\nright\b\tleft\b\23section_separators\1\0\2\nright\b\tleft\b\1\0\3\23section_separators\0\ntheme\15catppuccin\25component_separators\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
 
 _G._packer.inside_compile = false

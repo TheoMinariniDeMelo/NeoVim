@@ -1,5 +1,5 @@
-require("plugins.init")
 require('mason').setup()
+require("plugins.init")
 require("keymaps.init")
 require'lspconfig'.pyright.setup{}
 

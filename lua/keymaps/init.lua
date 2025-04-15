@@ -122,11 +122,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.api.nvim_set_keymap('v', '<C-S-r>', ':s/^/# /<CR>', { noremap = true, silent = true })
 
--- dap
-require("keymaps.dap-keymaps")
--- end dap
-
-
 -- coc
 require("keymaps.coc")
 -- end coc

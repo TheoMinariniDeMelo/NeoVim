@@ -1,11 +1,10 @@
 -- Configuração do tema
-vim.cmd 'silent! colorscheme catppuccin-frappe'
+--vim.cmd 'silent! colorscheme catppuccin-frappe'
 
 -- Carregar packer e configurações de Jupytext
 vim.cmd [[
 packadd packer.nvim
-let g:jupytext_fmt = 'py'
-let g:jupytext_style = 'hydrogen'
+silent! colorscheme catppuccin-frappe
 nmap ]x ctrih/^# %%<CR><CR>
 ]]
 
@@ -31,7 +30,7 @@ require('packer').startup(function(use)
 		config = function()
 			require('lualine').setup {
 				options = {
-					theme = 'catppuccin',
+					theme = 'catppuccin-frappe',
 					section_separators = { left = '', right = '' },
 					component_separators = { left = '', right = '' },
 				}
@@ -39,22 +38,12 @@ require('packer').startup(function(use)
 		end
 	}
 	-- themes
-	use "rebelot/kanagawa.nvim"	
+	use "rebelot/kanagawa.nvim"
 
 	-- Telescope para busca
 	use {
 		'nvim-telescope/telescope.nvim',
-		tag = '0.1.0',
 		requires = { 'nvim-lua/plenary.nvim' },
-		config = function()
-			require('telescope').setup {
-				defaults = {
-					prompt_prefix = " ",
-					selection_caret = " ",
-					layout_strategy = "horizontal",
-				}
-			}
-		end
 	}
 	-- Treesitter para realce de sintaxe
 	use {
@@ -77,37 +66,6 @@ require('packer').startup(function(use)
 	use{
 		"nvim-neotest/nvim-nio",
 	}
-	-- Depuração (DAP) --
-	use { 
-		'mfussenegger/nvim-dap',
-		'mfussenegger/nvim-dap-python',
-		'rcarriga/nvim-dap-ui',
-		requires = {
-			"nvim-neotest/nvim-nio",
-			'mfussenegger/nvim-dap',
-		}
-	}
-	-- Suporte a REPL e integração com Jupytext
-	use {
-		'hkupty/iron.nvim',
-		'kana/vim-textobj-user',
-		'GCBallesteros/vim-textobj-hydrogen',
-		'GCBallesteros/jupytext.vim'
-	}
-	-- Suporte a Java com nvim-java
-	use {
-		'nvim-java/nvim-java',
-		requires = {
-			'nvim-java/nvim-java-refactor',
-			'nvim-java/lua-async-await',
-			'nvim-java/nvim-java-core',
-			'nvim-java/nvim-java-test',
-			'nvim-java/nvim-java-dap',
-			'MunifTanjim/nui.nvim',
-			'neovim/nvim-lspconfig',
-			'mfussenegger/nvim-dap',
-		}
-	}
 	-- Tema Catppuccin
 	use { 'catppuccin/nvim', as = 'catppuccin' }
 end)
@@ -115,9 +73,5 @@ end)
 -- Carregar configurações dos plugins
 
 require("plugins.treesitter")
-require("plugins.iron-core")
 require("plugins.nvim-tree")
-require("plugins.dap-python")
-require("plugins.dap-ui")
 require("plugins.MasonInitializer")
-require("plugins.java")
