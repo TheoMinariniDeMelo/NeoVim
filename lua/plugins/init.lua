@@ -3,10 +3,10 @@ vim.cmd 'silent! colorscheme catppuccin-frappe'
 
 -- Carregar packer e configurações de Jupytext
 vim.cmd [[
-  packadd packer.nvim
-  let g:jupytext_fmt = 'py'
-  let g:jupytext_style = 'hydrogen'
-  nmap ]x ctrih/^# %%<CR><CR>
+packadd packer.nvim
+let g:jupytext_fmt = 'py'
+let g:jupytext_style = 'hydrogen'
+nmap ]x ctrih/^# %%<CR><CR>
 ]]
 
 -- Configuração do Packer
@@ -24,6 +24,7 @@ require('packer').startup(function(use)
 	}
 	-- Fechamento automático de parênteses
 	use 'rstacruz/vim-closer'
+
 	-- Statusline com Lualine
 	use {
 		'nvim-lualine/lualine.nvim',
@@ -37,6 +38,9 @@ require('packer').startup(function(use)
 			}
 		end
 	}
+	-- themes
+	use "rebelot/kanagawa.nvim"	
+
 	-- Telescope para busca
 	use {
 		'nvim-telescope/telescope.nvim',
@@ -102,13 +106,14 @@ require('packer').startup(function(use)
 			'MunifTanjim/nui.nvim',
 			'neovim/nvim-lspconfig',
 			'mfussenegger/nvim-dap',
-	--	}
+		}
 	}
 	-- Tema Catppuccin
 	use { 'catppuccin/nvim', as = 'catppuccin' }
 end)
 
 -- Carregar configurações dos plugins
+
 require("plugins.treesitter")
 require("plugins.iron-core")
 require("plugins.nvim-tree")
@@ -116,4 +121,3 @@ require("plugins.dap-python")
 require("plugins.dap-ui")
 require("plugins.MasonInitializer")
 require("plugins.java")
-

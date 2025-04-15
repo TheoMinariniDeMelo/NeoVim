@@ -1,5 +1,5 @@
 require('mason-lspconfig').setup({
-	ensure_installed = { "pyright", "lua_ls", "clangd", "jdtls" },
+	ensure_installed = { "gopls","pyright", "lua_ls", "clangd", "jdtls" },
 	automatic_installation = true,
 })
 -- Configuração de cada servidor LSP
@@ -31,4 +31,5 @@ require('lspconfig').lua_ls.setup({ -- Nome correto do servidor LSP do Lua
 require('lspconfig').jdtls.setup {
   -- configuração do jdtsl
 }
+require("lspconfig").gopls.setup({})
 

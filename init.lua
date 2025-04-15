@@ -1,9 +1,10 @@
-require('mason').setup()
 require("plugins.init")
+require('mason').setup()
 require("keymaps.init")
 require'lspconfig'.pyright.setup{}
 
 local cmp = require'cmp'
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -25,4 +26,3 @@ cmp.setup({
     { name = 'luasnip' },         -- Snippets source
   },
 })
-
