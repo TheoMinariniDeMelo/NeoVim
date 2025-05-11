@@ -120,6 +120,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Macros
 -- Mapear <leader>c para comentar as linhas selecionadas 
 
+vim.g.mapleader = " "
+
+vim.keymap.set('n',"<leader>tf", "<cmd>tabnext<CR>")
+vim.keymap.set('n',"<leader>tp", "<cmd>tabprevious<CR>")
+vim.keymap.set('n',"<leader>tn", "<cmd>tabnew<CR>")
+vim.keymap.set('n',"<leader>tc", "<cmd>tabclose<CR>")
+
+vim.keymap.set('n', "<leader>l", "<cmd>lua vim.diagnostic.open_float()<CR>")
+
 vim.api.nvim_set_keymap('v', '<C-S-r>', ':s/^/# /<CR>', { noremap = true, silent = true })
 
 -- coc

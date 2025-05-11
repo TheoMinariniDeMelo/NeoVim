@@ -1,5 +1,6 @@
 require('mason-lspconfig').setup({
-	ensure_installed = { "gopls","pyright", "lua_ls", "clangd", "jdtls" },
+	ensure_installed = { "gopls","pyright", "lua_ls", "clangd", "jdtls",
+	"csharp_ls"},
 	automatic_installation = true,
 })
 -- Configuração de cada servidor LSP
@@ -13,6 +14,7 @@ require('lspconfig').pyright.setup({
 		})
 	end
 })
+vim.lsp.enable('csharp_ls')
 require('lspconfig').clangd.setup({})
 require('lspconfig').lua_ls.setup({ -- Nome correto do servidor LSP do Lua
 	settings = {
