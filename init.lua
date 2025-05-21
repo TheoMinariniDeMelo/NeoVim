@@ -1,7 +1,7 @@
 require('mason').setup()
 require("plugins.init")
 require("keymaps.init")
-require'lspconfig'.pyright.setup{}
+--require'lspconfig'.pyright.setup{}
 
 local cmp = require'cmp'
 

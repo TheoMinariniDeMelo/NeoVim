@@ -66,6 +66,11 @@ require('packer').startup(function(use)
 	use{
 		"nvim-neotest/nvim-nio",
 	}
+	-- DAP + suporte para .NET (vsdbg)
+	use {
+		'mfussenegger/nvim-dap',
+		'rcarriga/nvim-dap-ui',
+	}
 	-- Tema Catppuccin
 	use { 'catppuccin/nvim', as = 'catppuccin' }
 end)
@@ -75,3 +80,4 @@ end)
 require("plugins.treesitter")
 require("plugins.nvim-tree")
 require("plugins.MasonInitializer")
+require("plugins.dap-configure")

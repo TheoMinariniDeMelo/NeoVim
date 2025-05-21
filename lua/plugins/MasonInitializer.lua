@@ -1,6 +1,5 @@
 require('mason-lspconfig').setup({
-	ensure_installed = { "gopls","pyright", "lua_ls", "clangd", "jdtls",
-	"csharp_ls"},
+	ensure_installed = { "gopls","pyright", "lua_ls", "clangd", "jdtls", "csharp_ls", "eslint"},
 	automatic_installation = true,
 })
 -- Configuração de cada servidor LSP
@@ -15,8 +14,20 @@ require('lspconfig').pyright.setup({
 	end
 })
 vim.lsp.enable('csharp_ls')
-require('lspconfig').clangd.setup({})
-require('lspconfig').lua_ls.setup({ -- Nome correto do servidor LSP do Lua
+vim.lsp.enable('eslint')
+--vim.lsp.config('eslint')
+local lspconfig = require('lspconfig')
+
+lspconfig.tsserver.setup({
+  on_attach = function(client, bufnr)
+    -- Atalhos, formatação, etc.
+    print("LSP para JavaScript/TypeScript conectado!")
+  end
+})
+
+lspconfig.eslint.setup({})
+lspconfig.clangd.setup({})
+lspconfig.lua_ls.setup({ -- Nome correto do servidor LSP do Lua
 	settings = {
 		Lua = {
 			diagnostics = {
@@ -29,9 +40,5 @@ require('lspconfig').lua_ls.setup({ -- Nome correto do servidor LSP do Lua
 		}
 	}
 })
-
-require('lspconfig').jdtls.setup {
-  -- configuração do jdtsl
-}
-require("lspconfig").gopls.setup({})
+lspconfig.gopls.setup({})
 

@@ -115,7 +115,7 @@ _G.packer_plugins = {
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lualine.nvim"] = {
-    config = { "\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\foptions\1\0\1\foptions\0\25component_separators\1\0\2\nright\b\tleft\b\23section_separators\1\0\2\nright\b\tleft\b\1\0\3\23section_separators\0\ntheme\15catppuccin\25component_separators\0\nsetup\flualine\frequire\0" },
+    config = { "\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\foptions\1\0\1\foptions\0\25component_separators\1\0\2\tleft\b\nright\b\23section_separators\1\0\2\tleft\b\nright\b\1\0\3\ntheme\22catppuccin-frappe\25component_separators\0\23section_separators\0\nsetup\flualine\frequire\0" },
     loaded = true,
     path = "/home/talkk/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
@@ -185,7 +185,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\foptions\1\0\1\foptions\0\25component_separators\1\0\2\nright\b\tleft\b\23section_separators\1\0\2\nright\b\tleft\b\1\0\3\23section_separators\0\ntheme\15catppuccin\25component_separators\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
+try_loadstring("\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\3\0005\4\4\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\foptions\1\0\1\foptions\0\25component_separators\1\0\2\tleft\b\nright\b\23section_separators\1\0\2\tleft\b\nright\b\1\0\3\ntheme\22catppuccin-frappe\25component_separators\0\23section_separators\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
 
 _G._packer.inside_compile = false

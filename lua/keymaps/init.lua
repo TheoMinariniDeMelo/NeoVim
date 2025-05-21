@@ -117,7 +117,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- Macros
+------ Macros ------
 -- Mapear <leader>c para comentar as linhas selecionadas 
 
 vim.g.mapleader = " "
@@ -131,6 +131,16 @@ vim.keymap.set('n', "<leader>l", "<cmd>lua vim.diagnostic.open_float()<CR>")
 
 vim.api.nvim_set_keymap('v', '<C-S-r>', ':s/^/# /<CR>', { noremap = true, silent = true })
 
+-- DAP
+local dap = require("dap");
+
+vim.keymap.set('n', '<F5>', dap.continue)
+vim.keymap.set('n', '<F10>', dap.step_over)
+vim.keymap.set('n', '<F11>', dap.step_into)
+vim.keymap.set('n', '<F12>', dap.step_out)
+vim.keymap.set('n', '<Leader>b', dap.toggle_breakpoint)
+
+
 -- coc
-require("keymaps.coc")
--- end coc
+vim.api.nvim_set_keymap('n', '<C-]>', ':call CocActionAsync("definition")<CR>', { noremap = true, silent = true }) -- Configurar o coc.nvim 
+vim.g.coc_global_extensions = {'coc-python'}
