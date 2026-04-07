@@ -122,10 +122,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.g.mapleader = " "
 
+vim.keymap.set('n', '<leader>l', "<cmd>lua vim.diagnostic.open_float()<CR>")
+
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+
 vim.keymap.set('n',"<leader>tf", "<cmd>tabnext<CR>")
 vim.keymap.set('n',"<leader>tp", "<cmd>tabprevious<CR>")
 vim.keymap.set('n',"<leader>tn", "<cmd>tabnew<CR>")
 vim.keymap.set('n',"<leader>tc", "<cmd>tabclose<CR>")
+
+
+vim.keymap.set('n',"<C-,>", "<cmd>Telescope live_grep<CR>")
 
 vim.keymap.set('n', "<leader>l", "<cmd>lua vim.diagnostic.open_float()<CR>")
 

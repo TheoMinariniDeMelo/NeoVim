@@ -1,3 +1,4 @@
+--[[
 require('mason-lspconfig').setup({
 	ensure_installed = { "gopls","pyright", "lua_ls", "clangd", "jdtls", "csharp_ls", "eslint"},
 	automatic_installation = true,
@@ -41,4 +42,4 @@ lspconfig.lua_ls.setup({ -- Nome correto do servidor LSP do Lua
 	}
 })
 lspconfig.gopls.setup({})
-
+]]--
